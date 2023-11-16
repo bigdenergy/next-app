@@ -6,7 +6,6 @@ export default function Products() {
     const searchParams = useSearchParams();
     const queries = searchParams;
     // ?name=query
-    console.log(queries.get('name'));
     return (
         <>
         {

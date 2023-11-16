@@ -24,7 +24,7 @@ export default function CreateContextProvider({
 
   return (
   <Context.Provider value={GlobalContext}>
-    {!user && <div>Access denied. You're not connected.</div> }
+    {!user && <div>Access denied. You are not connected.</div> }
     {user && <div>{children}</div>}
   </Context.Provider>
   )
