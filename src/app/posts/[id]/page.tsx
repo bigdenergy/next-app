@@ -1,6 +1,6 @@
 //1 function fetchPotst
 const fetchPost = async (postId: string) => {
-    const post = await fetch('', {
+    const post = await fetch(`/api/posts/${postId}`, {
         method: "GET"
     })
     return post.json();
