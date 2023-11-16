@@ -15,8 +15,6 @@ export async function GET(request: Request, context: any) {
             "name": "Patrick"
         }
     ]
-
-    console.log(params.id);
     
     return NextResponse.json({
         user: users.find(x => x.id.toString() === params.id)

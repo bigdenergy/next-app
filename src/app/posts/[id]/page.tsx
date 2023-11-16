@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000"
+const BASE_URL = "https://next-app-seven.vercel.app"
 
 //1 function fetchPotst
 const fetchPost = async (postId: string) => {
@@ -10,9 +10,15 @@ const fetchPost = async (postId: string) => {
 // 2 . generateMetadata
 export async function generateMetadata({params}: any) {
   const { post } = await fetchPost(params.id);
-  console.log(post);
 
   return {
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: '/',
+      languages: {
+        'fr-FR': '/fr-FR',
+      },
+    },
     title: post.title,
     description: post.description,
     openGraph: {
