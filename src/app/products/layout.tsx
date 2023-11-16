@@ -4,10 +4,8 @@ import Error from "./error"
 
 export default function ProductLayout({
     children,
-    fallback
   }: {
     children: React.ReactNode
-    fallback: React.ReactNode
   }) {
     return (
         <div className="px-2"> 
